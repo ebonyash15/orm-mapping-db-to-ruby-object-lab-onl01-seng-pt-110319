@@ -1,7 +1,6 @@
 class Student
   attr_accessor :id, :name, :grade
   @@all=[]
-
   def self.new_from_db(row)
     sql = "SELECT * FROM students"
     results = DB[:conn].execute(sql)
